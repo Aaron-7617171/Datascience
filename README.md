@@ -20,7 +20,7 @@ This project investigates whether interest rate change announcements by the Euro
 ## Step 1: Collecting Data
 
 - **Financial Data (API):**  
-  Start: `stock_data_downloader.py` in folder [01_Raw Data/yFinance API](01_Raw%20Data/yFinance%20API)
+  Start `stock_data_downloader.py` in folder [01_Raw Data/yFinance API](01_Raw%20Data/yFinance%20API)
 
 - **ECB Data (from Browser):**  
   PDFs downloaded from [ECB Press Releases](https://www.ecb.europa.eu/press/govcdec/mopo/html/index.en.html) to folder [01_Raw Data/ECB PDF Downloads](01_Raw%20Data/ECB%20PDF%20Downloads)  
@@ -55,13 +55,14 @@ This project investigates whether interest rate change announcements by the Euro
 
 **Restructuring done for later steps:**  
 - Uploaded the folder [TEXT/EZB](02_Preprocessing/TEXT/EZB) in [02_Preprocessing](02_Preprocessing) as a [Dataset](https://kaggle.com/datasets/7c259f2a2bfe3bc39138ff3856969397cd09f498515434bb2459e8b512711e2c) to Kaggle
-- Copieed `interest_rate_2022_2025.xlsx` and `stock_data_combined_onehot.xlsx` to [03_Dataset Creation/Local Computer/Data](03_Dataset%20Creation/Local%20Computer/Data)
+- Copied `interest_rate_2022_2025.xlsx` and `stock_data_combined_onehot.xlsx` to [03_Dataset Creation/Local Computer/Data](03_Dataset%20Creation/Local%20Computer/Data)
 
 ---
 
-## Step 2.2: Sentiment Analysis
+## Step 2.1: Sentiment Analysis
 
-- Extract Sentiment Analysis: Load `03-1-Sentiment-Analysis.ipynb` from [03_Dataset Creation/Kaggle Notebook](03_Dataset%20Creation/Kaggle%20Notebook) into Kaggle  
+- Extract Sentiment Analysis:
+  - Load `03-1-Sentiment-Analysis.ipynb` from [03_Dataset Creation/Kaggle Notebook](03_Dataset%20Creation/Kaggle%20Notebook) into Kaggle  
   - Integrate Dataset: [llm-text](https://kaggle.com/datasets/7c259f2a2bfe3bc39138ff3856969397cd09f498515434bb2459e8b512711e2c)  
   - Or just click the link and it's preloaded: [Sentiment Analysis Notebook](https://www.kaggle.com/code/aarongresser/03-1-sentiment-analysis)  
   - Run code below the markdown "All Models Compared"  
@@ -75,11 +76,21 @@ This project investigates whether interest rate change announcements by the Euro
   -> creates  `DS_14_t_3days_complete.xlsx` in [Dataset](03_Dataset%20Creation/Local%20Computer/Dataset)  
   - Uploaded it to Kaggle: ["datasets-training"](https://kaggle.com/datasets/c2a9858f6f6f4277ca02bb2c06efe9efd659b999021aa1b4a76253c1877ea9ef)
 
-- Create complete datasets: Load `03-dataset-splitting.ipynb` from [03_Dataset Creation/Kaggle Notebook](03_Dataset%20Creation/Kaggle%20Notebook) into Kaggle  
-  - Integrate Dataset: [datasets-training](https://kaggle.com/datasets/c2a9858f6f6f4277ca02bb2c06efe9efd659b999021aa1b4a76253c1877ea9ef)  
+- Create complete datasets:
+  - Load `03-dataset-splitting.ipynb` from [03_Dataset Creation/Kaggle Notebook](03_Dataset%20Creation/Kaggle%20Notebook) into Kaggle  
+  - Integrate Dataset: [datasets-training](https://kaggle.com/datasets/c2a9858f6f6f4277ca02bb2c06efe9efd659b999021aa1b4a76253c1877ea9ef)
+  - Or just click the link and it's preloaded: [Dataset Creation Notebook](https://www.kaggle.com/code/aarongresser/03-dataset-splitting)
   - Complete run  
   - Download .xlsx data files 
-  - Save as a new Kaggle Dataset: ["Datasets_NaiveBayes"](https://kaggle.com/datasets/8b0f9663f57b56f070d7635f52d0f2629b0aa6f3a9678d3454d8355580490204)  
+  - Save as a new Kaggle Dataset: ["Datasets_NaiveBayes"](https://kaggle.com/datasets/8b0f9663f57b56f070d7635f52d0f2629b0aa6f3a9678d3454d8355580490204)
+ 
+## Step 3.1: Dataset Visualisation
+
+- Load `03-dataset-visualization.ipynb` from [03_Dataset Creation/Kaggle Notebook](03_Dataset%20Creation/Kaggle%20Notebook) into Kaggle    
+ - Load the dataset: [Datasets_NaiveBayes](https://kaggle.com/datasets/8b0f9663f57b56f070d7635f52d0f2629b0aa6f3a9678d3454d8355580490204)  
+ - Or just click the link and it's preloaded: [Dataset Visualization Notebook](https://www.kaggle.com/code/aarongresser/03-dataset-visualization)
+ - Complete run
+
 
 ---
 
@@ -103,5 +114,6 @@ This project investigates whether interest rate change announcements by the Euro
 ## Author
 
 Aaron Gresser 
+
 The Paper to this code can be found [here](Data_Science_in_Practice%202_1.pdf)
 
